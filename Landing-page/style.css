@@ -1,0 +1,351 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(hotel.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.logo {
+  height: 50px;
+  border-radius: 35px;
+  cursor: pointer;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  margin: auto;
+  padding: 10px 0;
+  display: flex;
+  z-index: 1;
+  background-color: black;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+.navbar ul li::after {
+  content: ' ';
+  height: 3px;
+  width: 0%;
+  background: rgb(105, 214, 105);
+  position: absolute;
+  left: 0px;
+  bottom: -10px;
+  transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+  width: 100%;
+}
+
+.middle-part {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #fff;
+}
+
+.middle-part h1 {
+  font-size: 70px;
+  margin-top: 80px;
+}
+
+.middle-part p {
+  margin: 20px auto;
+  font-weight: 100;
+  line-height: 25px;
+}
+
+button {
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid rgb(105, 214, 105);
+  background: transparent;
+  cursor: pointer;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+span {
+  background: rgb(105, 214, 105);
+  height: 100%;
+  width: 0;
+  border-radius: 25px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+button:hover span {
+  width: 100%;
+}
+
+button:hover {
+  border: none;
+}
+
+.section {
+  margin-top: 40px;
+  padding: 40px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.section h2 {
+  color: rgb(105, 214, 105);
+}
+
+.section p {
+  color: #333;
+  line-height: 1.6;
+}
+
+.book-now-section {
+  margin-top: 40px;
+  padding: 40px;
+  text-align: center;
+  background-color: #f4f4f4;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.book-now-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-now-text {
+  flex: 1;
+  text-align: left;
+}
+
+.book-now-section h2 {
+  color: rgb(105, 214, 105);
+}
+
+.book-now-section p {
+  color: #333;
+  line-height: 1.6;
+}
+
+.book-now-section button {
+  width: 150px;
+  padding: 15px 0;
+  border: none;
+  border-radius: 25px;
+  background: rgb(105, 214, 105);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.book-now-section button:hover {
+  background: #4caf50;
+}
+
+.book-now-image {
+  flex: 1;
+}
+
+.book-now-image img {
+  max-width: 60%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+.contact-form {
+  margin-top: 40px;
+  padding: 40px;
+  text-align: center;
+  background-color: #f4f4f4;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  color: rgb(105, 214, 105);
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 25%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form textarea {
+  height: 100px;
+}
+
+.contact-form button {
+  width: 100px;
+  padding: 15px 0;
+  border: none;
+  border-radius: 25px;
+  background: rgb(105, 214, 105);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+  background: #4caf50;
+}
+
+.about-section {
+  margin-top: 40px;
+  padding: 40px;
+  text-align: center;
+  background-color: #f4f4f4;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-text {
+  flex: 1;
+  text-align: left;
+}
+
+.about-section h2 {
+  color: rgb(105, 214, 105);
+}
+
+.about-section p {
+  color: #333;
+  line-height: 1.6;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  max-width: 150%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.feedback-section {
+  margin-top: 40px;
+  padding: 40px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedback-text {
+  flex: 1;
+  text-align: left;
+}
+
+.feedback-section h2 {
+  color: rgb(105, 214, 105);
+}
+
+.feedback-section p {
+  color: #333;
+  line-height: 1.6;
+}
+
+.feedback-text form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.feedback-text label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.feedback-text input,
+.feedback-text textarea {
+  width: 60%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.feedback-text textarea {
+  height: 100px;
+}
+
+.feedback-text button {
+  width: 150px;
+  padding: 15px 0;
+  border: none;
+  border-radius: 25px;
+  background: rgb(105, 214, 105);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.feedback-text button:hover {
+  background: #4caf50;
+}
+
+.feedback-image {
+  flex: 1;
+}
+
+.feedback-image img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel-Bookings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="banner">
+    <div class="navbar">
+      <img src="hotellogo.jpg" alt="no image" class="logo">
+      <ul>
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#book-now" class="nav-link">Book-Now</a></li>
+        <li><a href="#contact-us" class="nav-link">Contact us</a></li>
+        <li><a href="#feedback" class="nav-link">FeedBack-form</a></li>
+      </ul>
+    </div>
+    <div class="middle-part" id="home">
+      <h1>ONLINE BOOKINGS</h1>
+      <p>Discover Exquisite Stays: Unwind in Luxury, Embrace Comfort, and  Create <br> Memorable Moments. Your Perfect Getaway Awaits!</p>
+      <div>
+        <button><span></span>Book-Now</button>
+        <button><span></span>5-STAR HOTELS</button>
+      </div>
+    </div>
+  </div>
+
+<div id="about" class="section about-section">
+  <div class="about-content">
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>Welcome to Online Hotel Bookings, where luxury meets convenience. Our mission is to provide you with an exceptional experience, offering a wide range of exquisite stays tailored to your preferences. Whether you seek a relaxing retreat or a grand adventure, our carefully curated selection of hotels ensures a memorable journey for every traveler.</p>
+      <p>At Online Hotel Bookings, we prioritize comfort, quality, and personalized service. Our commitment to excellence extends from the moment you book until the end of your stay. Discover the world of premium accommodations and embark on a seamless travel experience with us.</p>
+    </div>
+    <div class="about-image">
+      <img src="hotelroom1.jpg" alt="About Us Image">
+    </div>
+  </div>
+</div>
+
+<div id="book-now" class="section book-now-section">
+  <div class="book-now-content">
+    <div class="book-now-text">
+      <h2>Book Now</h2>
+      <p>Your next adventure awaits! Book your stay with us and experience luxury like never before. Discover the Genius way to travel
+        Booking.com's loyalty programme is simple. The more you stay with us, the more travel rewards you'll get. Sign in or create an account to get started.</p>
+      <button><span></span>Book Now</button>
+    </div>
+    <div class="book-now-image">
+      <img src="hotelroom.jpg" alt="Book Now Image">
+    </div>
+  </div>
+</div>
+
+
+<div id="contact-us" class="section contact-form">
+  <h2>Contact Us</h2>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<div id="feedback" class="section feedback-section">
+  <div class="feedback-content">
+    <div class="feedback-text">
+      <h2>Feedback Form</h2>
+      <p>We value your opinion! Share your feedback with us to help enhance your future experiences. Your comments are important to us, and we appreciate your time in providing valuable insights. We strive to create a seamless and enjoyable stay for all our guests.</p>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Feedback:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="feedback-image">
+      <img src="hotelfeedbackform.jpg" alt="Feedback Form Image">
+    </div>
+  </div>
+</div>
+
+
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
